@@ -20,7 +20,7 @@ public class InvoiceController {
     }
 
     @GetMapping("/invoices")
-    public List<Invoice> findAll() {
+    public Iterable<Invoice> findAll() {
         return invoiceService.findAll();
     }
 

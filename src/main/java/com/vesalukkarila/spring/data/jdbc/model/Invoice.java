@@ -1,11 +1,14 @@
 package com.vesalukkarila.spring.data.jdbc.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
 
 import java.util.UUID;
 
+@Table("INVOICES")
 public class Invoice {
-
+    @Id
     private String id;
     @JsonProperty("user_id")
     private String userId;
